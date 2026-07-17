@@ -3701,6 +3701,126 @@ color:#fff;
 
 }
 
+/* ===== FINAL GOOGLE FORM OVERRIDE ===== */
+
+#contact .contact-wrapper{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:40px !important;
+    align-items:start !important;
+}
+
+#contact .contact-left,
+#contact .contact-right{
+    width:100% !important;
+    box-sizing:border-box !important;
+}
+
+#contact .contact-right{
+    padding:30px !important;
+    border-radius:24px !important;
+    background:rgba(255,255,255,.06) !important;
+    border:1px solid rgba(255,255,255,.10) !important;
+    backdrop-filter:blur(20px);
+}
+
+#contact #google-form{
+    display:block !important;
+    width:100% !important;
+}
+
+#contact #google-form .input-box{
+    display:block !important;
+    width:100% !important;
+    margin:0 0 16px 0 !important;
+}
+
+#contact #google-form input,
+#contact #google-form select,
+#contact #google-form textarea{
+    display:block !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+    padding:16px 18px !important;
+    margin:0 !important;
+
+    background:rgba(255,255,255,.06) !important;
+    border:1px solid rgba(255,255,255,.12) !important;
+    border-radius:14px !important;
+
+    color:#fff !important;
+    font-family:'Inter',sans-serif !important;
+    font-size:15px !important;
+
+    outline:none !important;
+}
+
+#contact #google-form textarea{
+    min-height:130px !important;
+    resize:vertical !important;
+}
+
+#contact #google-form input::placeholder,
+#contact #google-form textarea::placeholder{
+    color:#9ca3af !important;
+}
+
+#contact #google-form select{
+    cursor:pointer !important;
+}
+
+#contact #google-form select option{
+    background:#111827 !important;
+    color:#fff !important;
+}
+
+#contact #google-form input:focus,
+#contact #google-form select:focus,
+#contact #google-form textarea:focus{
+    border-color:#06b6d4 !important;
+    box-shadow:0 0 0 3px rgba(6,182,212,.10) !important;
+}
+
+#contact #submit-btn{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    min-height:52px !important;
+    margin:0 !important;
+    border:none !important;
+    cursor:pointer !important;
+}
+
+/* TABLET & MOBILE */
+
+@media (max-width:992px){
+
+    #contact .contact-wrapper{
+        grid-template-columns:1fr !important;
+        gap:30px !important;
+    }
+
+    #contact .contact-right{
+        padding:25px !important;
+    }
+}
+
+@media (max-width:576px){
+
+    #contact .contact-right{
+        padding:18px !important;
+        border-radius:18px !important;
+    }
+
+    #contact #google-form input,
+    #contact #google-form select,
+    #contact #google-form textarea{
+        padding:14px 15px !important;
+        font-size:14px !important;
+    }
+}
+
 /* ==========================================================
    END OF FILE
 ========================================================== */
