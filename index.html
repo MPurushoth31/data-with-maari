@@ -507,6 +507,7 @@ footer { padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,.08); back
     .tech span { font-size: 12px; padding: 8px 14px; }
 }
 </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -1073,6 +1074,8 @@ footer { padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,.08); back
                         Send Message
                     </button>
 
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
+
 
                 </form>
 
@@ -1326,6 +1329,34 @@ const counterObserver = new IntersectionObserver((entries) => {
     });
 });
 counters.forEach(counter => counterObserver.observe(counter));
+
+// GOOGLE FORM SUBMISSION FEEDBACK
+const googleForm = document.getElementById("google-form");
+const submitBtn = document.getElementById("submit-btn");
+const formStatus = document.getElementById("form-status");
+const hiddenIframe = document.getElementById("hidden_iframe");
+let contactFormSubmitted = false;
+
+googleForm?.addEventListener("submit", () => {
+    if (!googleForm.checkValidity()) return;
+
+    contactFormSubmitted = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    formStatus.className = "form-status";
+    formStatus.textContent = "Sending your message...";
+});
+
+hiddenIframe?.addEventListener("load", () => {
+    if (!contactFormSubmitted) return;
+
+    contactFormSubmitted = false;
+    googleForm.reset();
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send Message";
+    formStatus.className = "form-status success";
+    formStatus.textContent = "Message sent successfully.";
+});
 
 </script>
 </body>
