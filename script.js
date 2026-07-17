@@ -1021,41 +1021,35 @@ mobileToggle.classList.remove("active");
  CONTACT FORM
 ==========================================================*/
 
-const form=document.querySelector("form");
+const googleForm = document.getElementById("google-form");
 
-if(form){
+const submitBtn = document.getElementById("submit-btn");
 
-form.addEventListener("submit",(e)=>{
+if(googleForm && submitBtn){
 
-e.preventDefault();
+    googleForm.addEventListener("submit", function(){
 
-const button=form.querySelector("button");
+        submitBtn.innerHTML = "Sending...";
 
-button.innerHTML="Sending...";
+        submitBtn.disabled = true;
 
-button.disabled=true;
+        setTimeout(function(){
 
-setTimeout(()=>{
+            submitBtn.innerHTML = "Message Sent ✓";
 
-button.innerHTML="Message Sent ✓";
+            googleForm.reset();
 
-button.style.background="#22c55e";
+            setTimeout(function(){
 
-setTimeout(()=>{
+                submitBtn.innerHTML = "Send Message";
 
-button.innerHTML="Send Message";
+                submitBtn.disabled = false;
 
-button.disabled=false;
+            },3000);
 
-button.removeAttribute("style");
+        },1500);
 
-form.reset();
-
-},2500);
-
-},1800);
-
-});
+    });
 
 }
 
