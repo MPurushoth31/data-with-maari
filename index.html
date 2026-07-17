@@ -890,6 +890,52 @@ footer { padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,.08); back
             </div>
         </div>
     </div>
+
+
+            <div class="contact-right">
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSet6VioXrMAlgYCXdnUveZ0fvPVd5Q176eSx2nA0G9sIXBFxQ/formResponse" method="POST" target="hidden_iframe" id="google-form">
+                    <!-- NAME -->
+                    <div class="input-box">
+                        <input type="text" name="entry.131085516" placeholder="Your Name" required>
+                    </div>
+
+                    <!-- MOBILE NUMBER -->
+                    <div class="input-box">
+                        <input type="tel" name="entry.328270071" placeholder="Your Mobile Number">
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="input-box">
+                        <input type="email" name="entry.366516044" placeholder="Your Email" required>
+                    </div>
+
+                    <!-- CURRENT STATUS -->
+                    <div class="input-box">
+                        <select name="entry.1451035686" required>
+                            <option value="" disabled selected>Select Current Status</option>
+                            <option value="Student">Student</option>
+                            <option value="Working Professional">Working Professional</option>
+                            <option value="Job Seeker">Job Seeker</option>
+                        </select>
+                    </div>
+
+                    <!-- MESSAGE -->
+                    <div class="input-box">
+                        <textarea name="entry.1431322861" rows="6" placeholder="How Can I Help You?" required></textarea>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="btn primary" id="submit-btn">Send Message</button>
+                </form>
+                
+                <!-- HIDDEN IFRAME -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            </div>
+        </div>
+    </div>   
+
+   
+   
 </section>
 
 <!-- FOOTER -->
