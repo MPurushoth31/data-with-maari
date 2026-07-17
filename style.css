@@ -2675,100 +2675,6 @@ justify-content:center;
     cursor:pointer;
 }
 
-
-/* ==========================================================
-   TABLET RESPONSIVE
-========================================================== */
-
-@media (max-width:992px){
-
-    .contact-wrapper{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-
-    .contact-left{
-        width:100%;
-    }
-
-    .contact-right{
-        width:100%;
-        padding:30px;
-    }
-
-}
-
-
-/* ==========================================================
-   MOBILE RESPONSIVE
-========================================================== */
-
-@media (max-width:576px){
-
-    .contact-wrapper{
-        gap:28px;
-    }
-
-    .contact-left{
-        gap:12px;
-    }
-
-    .contact-card{
-        min-height:70px;
-        padding:13px 15px;
-        gap:13px;
-        border-radius:14px;
-    }
-
-    .contact-icon{
-        width:44px;
-        height:44px;
-        border-radius:12px;
-    }
-
-    .contact-icon i{
-        font-size:17px;
-    }
-
-    .contact-info h3{
-        font-size:15px;
-    }
-
-    .contact-info p{
-        font-size:12px;
-    }
-
-    .contact-card > .fa-chevron-right{
-        font-size:12px;
-    }
-
-    .contact-right{
-        padding:20px;
-        border-radius:18px;
-    }
-
-    .input-box{
-        margin-bottom:14px;
-    }
-
-    .input-box input,
-    .input-box textarea,
-    .input-box select{
-        padding:14px 15px;
-        border-radius:12px;
-        font-size:14px;
-    }
-
-    .input-box textarea{
-        min-height:120px;
-    }
-
-    .contact-right .btn{
-        min-height:48px;
-    }
-
-}
-
 /* ==========================================================
    FOOTER
 ========================================================== */
@@ -3442,383 +3348,187 @@ box-shadow .3s;
 }
 
 /* ==========================================================
-   MOBILE MENU PLACEHOLDER
+   CONTACT FORM - FINAL FIX
 ========================================================== */
 
-.mobile-toggle{
-
-display:none;
-
-font-size:28px;
-
-color:white;
-
-cursor:pointer;
-
+#contact .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-/* ==========================================================
-   LARGE SCREEN
-========================================================== */
+#contact .contact-right {
+    width: 100%;
+    padding: 35px;
+    border-radius: 24px;
 
-@media(min-width:1600px){
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,58,237,.15),
+            rgba(37,99,235,.10),
+            rgba(6,182,212,.08)
+        );
 
-.container{
+    border: 1px solid rgba(255,255,255,.12);
 
-max-width:1500px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.20),
+        0 0 40px rgba(124,58,237,.08);
 }
 
-.hero-left h1{
-
-font-size:110px;
-
+#contact #google-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.photo{
-
-width:480px;
-
-height:620px;
-
-}
-
-}
-
-/* ==========================================================
-   TABLET
-========================================================== */
-
-@media (max-width:992px){
-
-.mobile-toggle{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-width:50px;
-
-height:50px;
-
-font-size:26px;
-
-color:#fff;
-
-cursor:pointer;
-
-z-index:1001;
-
-}
-
-.resume{
-
-display:none;
-
-}
-
-nav{
-
-position:fixed;
-
-top:90px;
-
-left:-100%;
-
-width:100%;
-
-height:calc(100vh - 90px);
-
-background:#050816;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-gap:35px;
-
-transition:left .4s ease;
-
-z-index:1000;
-
-}
-
-nav.show{
-
-left:0;
-
-}
-
-nav a{
-
-font-size:22px;
-
-}
-
-}
-
-/* ==========================================================
-   MOBILE
-========================================================== */
-
-@media(max-width:576px){
-
-.container{
-
-width:92%;
-
-}
-
-section{
-
-padding:70px 0;
-
-}
-
-.section-title h2{
-
-font-size:30px;
-
-}
-
-.hero-left h1{
-
-font-size:42px;
-
-}
-
-.hero-left h2{
-
-font-size:22px;
-
-}
-
-.hero-left h3{
-
-font-size:18px;
-
-}
-
-.hero-left p{
-
-font-size:15px;
-
-line-height:1.8;
-
-}
-
-.tag{
-
-font-size:11px;
-
-padding:10px 18px;
-
-}
-
-.photo{
-
-width:270px;
-
-height:360px;
-
-}
-
-.tech{
-
-gap:10px;
-
-}
-
-.tech span{
-
-font-size:12px;
-
-padding:10px 16px;
-
-}
-
-.footer-right{
-
-gap:15px;
-
-font-size:14px;
-
-}
-
-.copyright{
-
-font-size:13px;
-
-}
-
-}
-
-.contact-right select{
-
-width:100%;
-
-padding:18px 20px;
-
-border-radius:14px;
-
-border:1px solid rgba(255,255,255,.1);
-
-background:#111827;
-
-color:#fff;
-
-font-family:inherit;
-
-font-size:15px;
-
-outline:none;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.contact-right select:focus{
-
-border-color:#06b6d4;
-
-box-shadow:0 0 0 3px rgba(6,182,212,.1);
-
-}
-
-.contact-right select option{
-
-background:#111827;
-
-color:#fff;
-
-}
-
-/* ===== FINAL GOOGLE FORM OVERRIDE ===== */
-
-#contact .contact-wrapper{
-    display:grid !important;
-    grid-template-columns:1fr 1fr !important;
-    gap:40px !important;
-    align-items:start !important;
-}
-
-#contact .contact-left,
-#contact .contact-right{
-    width:100% !important;
-    box-sizing:border-box !important;
-}
-
-#contact .contact-right{
-    padding:30px !important;
-    border-radius:24px !important;
-    background:rgba(255,255,255,.06) !important;
-    border:1px solid rgba(255,255,255,.10) !important;
-    backdrop-filter:blur(20px);
-}
-
-#contact #google-form{
-    display:block !important;
-    width:100% !important;
-}
-
-#contact #google-form .input-box{
-    display:block !important;
-    width:100% !important;
-    margin:0 0 16px 0 !important;
+#contact #google-form .input-box {
+    width: 100%;
+    margin: 0;
 }
 
 #contact #google-form input,
 #contact #google-form select,
-#contact #google-form textarea{
-    display:block !important;
-    width:100% !important;
-    box-sizing:border-box !important;
-    padding:16px 18px !important;
-    margin:0 !important;
+#contact #google-form textarea {
 
-    background:rgba(255,255,255,.06) !important;
-    border:1px solid rgba(255,255,255,.12) !important;
-    border-radius:14px !important;
+    display: block;
 
-    color:#fff !important;
-    font-family:'Inter',sans-serif !important;
-    font-size:15px !important;
+    width: 100%;
 
-    outline:none !important;
+    padding: 17px 20px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.04)
+        );
+
+    color: #ffffff;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: .3s ease;
 }
 
-#contact #google-form textarea{
-    min-height:130px !important;
-    resize:vertical !important;
+#contact #google-form textarea {
+    min-height: 140px;
+    resize: vertical;
 }
 
 #contact #google-form input::placeholder,
-#contact #google-form textarea::placeholder{
-    color:#9ca3af !important;
-}
-
-#contact #google-form select{
-    cursor:pointer !important;
-}
-
-#contact #google-form select option{
-    background:#111827 !important;
-    color:#fff !important;
+#contact #google-form textarea::placeholder {
+    color: #9ca3af;
 }
 
 #contact #google-form input:focus,
 #contact #google-form select:focus,
-#contact #google-form textarea:focus{
-    border-color:#06b6d4 !important;
-    box-shadow:0 0 0 3px rgba(6,182,212,.10) !important;
+#contact #google-form textarea:focus {
+
+    border-color: #06b6d4;
+
+    background: rgba(255,255,255,.08);
+
+    box-shadow:
+        0 0 0 3px rgba(6,182,212,.10),
+        0 0 25px rgba(6,182,212,.12);
 }
 
-#contact #submit-btn{
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    width:100% !important;
-    min-height:52px !important;
-    margin:0 !important;
-    border:none !important;
-    cursor:pointer !important;
+#contact #google-form select {
+    color: #b8c3d9;
+    cursor: pointer;
 }
 
-/* TABLET & MOBILE */
+#contact #google-form select option {
+    background: #0b1226;
+    color: #ffffff;
+}
 
-@media (max-width:992px){
+#contact #submit-btn {
 
-    #contact .contact-wrapper{
-        grid-template-columns:1fr !important;
-        gap:30px !important;
+    width: 100%;
+
+    min-height: 54px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #2563eb,
+            #06b6d4
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,.30);
+
+    transition: .3s ease;
+}
+
+#contact #submit-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 20px 45px rgba(37,99,235,.40);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    #contact .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    #contact .contact-right{
-        padding:25px !important;
-    }
 }
 
-@media (max-width:576px){
 
-    #contact .contact-right{
-        padding:18px !important;
-        border-radius:18px !important;
+/* MOBILE */
+
+@media (max-width: 576px) {
+
+    #contact .contact-right {
+        padding: 20px;
+        border-radius: 18px;
     }
 
     #contact #google-form input,
     #contact #google-form select,
-    #contact #google-form textarea{
-        padding:14px 15px !important;
-        font-size:14px !important;
+    #contact #google-form textarea {
+        padding: 14px 15px;
+        font-size: 14px;
     }
+
 }
 
 /* ==========================================================
